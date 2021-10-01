@@ -29,7 +29,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(Eigen3 REQUIRED)
 find_package(Fgt QUIET)
 option(WITH_FGT "Build with fgt" ${Fgt_FOUND})
-if(WITH_FGT)
+if(WITH_FGT AND NOT TARGET Fgt::fgt)
     find_package(Fgt REQUIRED)
 endif()
 
@@ -76,7 +76,7 @@ target_include_directories(cpd
     PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
-    ${EIGEN3_INCLUDE_DIR}
+    $<BUILD_INTERFACE:${EIGEN3_INCLUDE_DIR}>
     )
 if(WITH_FGT)
     target_link_libraries(cpd PUBLIC Fgt::fgt)
