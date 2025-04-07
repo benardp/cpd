@@ -62,7 +62,7 @@ target_include_directories(cpd
     ${EIGEN3_INCLUDE_DIR}
     )
 if(WITH_FGT)
-    target_link_libraries(cpd PRIVATE Fgt::cpd)
+    target_link_libraries(cpd PRIVATE Fgt::fgt)
     target_compile_definitions(cpd PRIVATE CPD_WITH_FGT)
 endif()
 
