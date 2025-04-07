@@ -85,9 +85,9 @@ endif()
 
 
 # Install
-install(TARGETS cpd DESTINATION lib EXPORT cpd-targets)
-install(DIRECTORY include/cpd DESTINATION include)
-install(EXPORT cpd-targets NAMESPACE Cpd:: DESTINATION lib/cmake/cpd)
+# install(TARGETS cpd DESTINATION lib EXPORT cpd-targets)
+# install(DIRECTORY include/cpd DESTINATION include)
+# install(EXPORT cpd-targets NAMESPACE Cpd:: DESTINATION lib/cmake/cpd)
 
 
 # Docs
