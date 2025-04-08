@@ -28,6 +28,7 @@
 #include <memory>
 #include <functional>
 #include <vector>
+#include <assert.h>
 
 #include <cpd/gauss_transform.hpp>
 #include <cpd/matrix.hpp>
